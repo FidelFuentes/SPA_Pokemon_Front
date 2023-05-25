@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "totemic-arcana-387811",
+  "private_key_id": "0ae0e12d2b5df422d9d65aee8b6e4e820b5ade18",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDgkiOGGuQQDRv2\n5NeoJ3xCAWP/JtWzt6a+DXWq15pYkLK9dth720dZzUJyyuUcNTbK5d3RKxBrd5Y4\nZKSLFfVzzs7Mc3Za4IZ+dWMgJmjDmbAFHAiomWF1lgcJogOLZ0R4IlVhID+I9tl7\nUtTLWpaDTaNTsdrLOV3jjRl84NNogC/Ep8OK7DxSUGYEUbiCJhpyriFUKa1wAp0S\nvjyZSVvAvypq9m6ON69WBk3Tqj2d2pQfRgvn8TSLGdNSMLLlXjaRyGTqOiNA63g9\ncw/8MoL9SwxvWsA9E69juGU8O20HW3dnXdOpjHNiZlPR1i1bxKcca+dGCFOJW1v0\nyNxeYExPAgMBAAECggEAPKF4EdbkyCih6jCywOWYOMHjW5oCjHkC/cDoie2X8F1w\nxJJ3tEjppKc0T4XUAZ+kYXdaQgTcdAdfeW5CtoKBOHkXgD+ULsj7xtyunJmCI300\n9sww0kRG+dY9pC4nwtVouP6cCpMIVFRBN3iPly+n/19Qv2H/bmrYnH0V6o9QxJ+F\np0K6bs5aSxz/od3i8ziUsTcSzHuBUt2S2mOQP+XvRS8zr2mETVdKGl+My0R8eAD8\nm9DfE3gEYu2/3MJdMuWcVKthM3SnJrP+C/F3TpKS3/rUXeea7/rVzT1sVu7cSPxb\nGM3z5Jl7v00gEScZRF1+8Syn6JBqvaRYpfqqGD5RgQKBgQD7kOi5uhkJNMqpGxct\nqK6NU4RtbfQRYarT4dLO719piyPWBaytUdHzXdqmdA5nEDlsBodF8JL4or3lkkRT\nVLwQlsxEcHmh49SGyJJSWOHB27MCCJ4G2L6UkwmIwM0xqwqu5fTeM4y7MFIYnZ8A\nA1EGj0eDiZSUhJaphu4FnCadrwKBgQDkh2y4BPT7Pzbu9VwnlOxtLc7fDL+NUnI1\neLRpPodBmDcNdrgmtA4ffIfMmk1WanrOnSL3juvDjDHfazkrx5Jjo8ZdbrNNM2Ay\n/5Oxr8nrQSryDiJsXoxnwYCvVhXXtLxeD48lDaJsdTLiTrRSIaKZ1BIsRsNjm5kO\nh2L7wVKDYQKBgFr/Dc+wy0GTQQNuczHm5Ezmuu5CaZin9XzzIKgN2jt5Qxs1rkJ7\naDBZ8K9pJ5SMP9kde20HGoKpi3sxL1ndOrHdekH/VWAD42plvtfeorrW16eSqmbb\nnARuM3KuGwsuTYz6TVra1rsXPXr9+PeuO27eAQZJi981HrJvxkVtOGKtAoGBAKUw\n00CtrJxU1JOk3mlqOACvpSMMZwZzu0S1rMuKvGCI8/qSf4jSjIbsEImwXAkETSM+\n6QDD2d5vX7mdGyVvTH0j7IarN4athXM31X4SkMWyRKXV28I0EhAKCsgzVPSom6Tu\nYE2rbmYxzYdS1vurforthfllaWV+GwQqjz1mQAvhAoGBAJEBxROI+narJFjJHNRL\npx2vsrIhxUjaVo8ydnGriUP5hLuA+MbH/LDJCiW9mXFXjVuWy8oFRA8Om/VNqE6U\n2fJDd8l7O6VD2igwQ6OSw4Bme6Pf4IYjYXOrisOyPTLr8eEoJjYic6fziCBzzNgM\nk5j8EhfH8UwJjeGPQF2Ft25n\n-----END PRIVATE KEY-----\n",
+  "client_email": "spa-pokemon-demo@totemic-arcana-387811.iam.gserviceaccount.com",
+  "client_id": "114512088738875509146",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spa-pokemon-demo%40totemic-arcana-387811.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

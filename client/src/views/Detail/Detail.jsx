@@ -44,7 +44,7 @@ fetch(`${URL_BASE}/${detailId}`)
                         
                         {console.log(pokemon.image)}
                        
-                        <img src={pokemon.image && (pokemon.image.startsWith('http') ? pokemon.image : `https://spapokeback-production-7dc5.up.railway.app/uploads${pokemon.image}`)} alt={pokemon.name} />
+                        <img src={pokemon.image && (pokemon.image.startsWith('http') ? pokemon.image : `https://spapokeback-production-7dc5.up.railway.app/uploads/${pokemon.image}`)} alt={pokemon.name} />
 
 
 

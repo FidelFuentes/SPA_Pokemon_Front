@@ -3,6 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './Form.module.css'
 import { createPokemon } from '../../redux/actions';
 
+import { Storage } from '@google-cloud/storage';
+import dotenv from 'dotenv';
+
+
+dotenv.config();
 
 
 const Form = () => {
@@ -54,6 +59,31 @@ const Form = () => {
         }
     }, [showError]);
     
+
+    const uploadFile = async (file) => {
+        const storage = new Storage();
+        const bucketName = process.env.GCS_BUCKET_NAME;
+        const bucket = storage.bucket(bucketName);
+      
+        const fileName = Date.now().toString(); // Nombre único para el archivo
+      
+        const fileUpload = bucket.file(fileName);
+        const stream = fileUpload.createWriteStream({
+          resumable: false,
+          contentType: file.mimetype,
+        });
+      
+        return new Promise((resolve, reject) => {
+          stream.on('error', (error) => reject(error));
+          stream.on('finish', () => {
+            const publicUrl = `https://storage.googleapis.com/${bucketName}/${fileName}`;
+            resolve(publicUrl);
+          });
+      
+          stream.end(file.buffer);
+        });
+      };
+      
       
 
     const changeHandler = (event) => {
@@ -123,7 +153,7 @@ const Form = () => {
     
       
 
-      const submitHandler = (event) => {
+      const submitHandler = async (event) => {
         event.preventDefault();
       
         // No envíes el formulario si hay errores
@@ -142,6 +172,16 @@ const Form = () => {
     for (var pair of formData.entries()) {
         console.log(pair[0]+ ', ' + pair[1]); 
     }
+
+    if (form.image) {
+        try {
+          const imageUrl = await uploadFile(form.image);
+          setForm({ ...form, image: imageUrl });
+        } catch (error) {
+          console.log('Error uploading file:', error);
+          // Maneja el error de carga de archivo aquí
+        }
+      }
       
         dispatch(createPokemon(formData));
         setShowSuccess(true);
