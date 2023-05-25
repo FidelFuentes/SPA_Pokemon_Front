@@ -19,8 +19,9 @@ const Pagination = ({ pokemonsPerPage, totalPokemons, paginate, currentPage }) =
           </button>
         </li>
         {pageNumbers.map(number => (
-          <li key={number} className={number === currentPage ? 'active-page' : ''}>
-            <a onClick={() => paginate(number)} className='page-link'>
+          <li key={number} className={number === currentPage ? styles['active-page'] : ''}>
+
+            <a href="#" onClick={() => paginate(number)} className='page-link'>
                 {number}
             </a>
           </li>
