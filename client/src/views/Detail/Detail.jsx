@@ -7,9 +7,9 @@ const Detail = () => {
     const [pokemon, setPokemon] = useState({})
 
     useEffect(() => {
-        const URL_BASE = '/pokemon'
+        const URL_BASE = 'https://spapokeback-production-7dc5.up.railway.app/pokemon'
 
-        fetch(`${URL_BASE}/${detailId}`)
+fetch(`${URL_BASE}/${detailId}`)
     .then((response) => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -18,10 +18,12 @@ const Detail = () => {
     })
     .then((poke) => {
         console.log(poke);
-        setPokemon(poke)})
+        setPokemon(poke)
+    })
     .catch((error) => {
         console.error('Error:', error);
     });
+
 
             
     }, [detailId]);
