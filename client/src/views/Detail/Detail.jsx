@@ -7,7 +7,7 @@ const Detail = () => {
     const [pokemon, setPokemon] = useState({})
 
     useEffect(() => {
-        const URL_BASE = 'http://localhost:3001/pokemon'
+        const URL_BASE = '/pokemon'
 
         fetch(`${URL_BASE}/${detailId}`)
             .then((response) => response.json())
@@ -32,7 +32,7 @@ const Detail = () => {
                         
                         {console.log(pokemon.image)}
                        
-                        <img src={pokemon.image.startsWith('http') ? pokemon.image : `http://localhost:3001/${pokemon.image}`} alt={pokemon.name} />
+                        <img src={pokemon.image.startsWith('http') ? pokemon.image : `/${pokemon.image}`} alt={pokemon.name} />
 
 
                         
