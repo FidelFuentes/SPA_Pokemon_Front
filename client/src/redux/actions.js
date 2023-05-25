@@ -7,7 +7,7 @@ export const SEARCH_POKEMON = 'SEARCH_POKEMON';
 
 export const getPokemons = () => {
     return async function(dispatch){
-        const apiData = await axios.get('http://localhost:3001/pokemon/')
+        const apiData = await axios.get('/pokemon/')
 
         const pokemons = apiData.data
         dispatch({type: GET_POKEMONS, payload:  pokemons})
@@ -17,7 +17,7 @@ export const getPokemons = () => {
 
 export const getPokemon = (id) => {
         return async function (dispatch){
-            const apiData = await axios.get(`http://localhost:3001/pokemon/${id}`)
+            const apiData = await axios.get(`/pokemon/${id}`)
             const pokemon = apiData.data;
             dispatch({type: GET_POKEMON, payload:  pokemon})
 
@@ -27,7 +27,7 @@ export const getPokemon = (id) => {
 
 export const searchPokemon = (name) => {
     return async function(dispatch){
-        const res = await axios.get(`http://localhost:3001/pokemon/?name=${name}`)
+        const res = await axios.get(`/pokemon/?name=${name}`)
         dispatch({type: SEARCH_POKEMON, payload: res.data})
     }
 }
@@ -41,7 +41,7 @@ export const createPokemon = (pokemon) => {
     return function (dispatch) {
       dispatch({ type: CREATE_POKEMON_REQUEST });
   
-      axios.post('http://localhost:3001/pokemon/', pokemon, {
+      axios.post('/pokemon/', pokemon, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -113,7 +113,7 @@ export const deletePokemon = (id) => {
   return function (dispatch) {
     dispatch({ type: DELETE_POKEMON_REQUEST });
 
-    axios.delete(`http://localhost:3001/pokemon/${id}`)
+    axios.delete(`/pokemon/${id}`)
     .then(() => {
         dispatch({ type: DELETE_POKEMON_SUCCESS, payload: id });
     })
@@ -128,7 +128,7 @@ export const GET_TYPES = "GET_TYPES";
 
 export const getTypes = () => {
     return async function(dispatch){
-        const apiData = await axios.get('http://localhost:3001/types/?limit=50')
+        const apiData = await axios.get('/types/?limit=50')
         const types = apiData.data
         dispatch({type: GET_TYPES, payload: types})
     }
