@@ -16,7 +16,7 @@ const Card = ({ id, name, image, types, created }) => {
         <div className={style.cardWrapper}>
             <Link to={`/detail/${id}`} className={style.card}>
                 <p className={style.id}>{created ? '' : id}</p>
-                <img src={image.startsWith('http') ? image : `http://localhost:3001/${image}`} alt={name} />
+                <img src={image.startsWith('http') ? image : `/${image}`} alt={name} />
                 <p>{name}</p>
                 <div>
                     {types.map((type, index) => <span key={index}>{type} </span>)}

@@ -7,7 +7,7 @@ import store from './redux/store';
 import axios from 'axios';
 
 //axios.defaults.baseURL = 'http://localhost:3001'
-axios.defaults.baseURL = 'https://spapokeback-production.up.railway.app'
+axios.defaults.baseURL = 'https://spapokeback-production-7dc5.up.railway.app/'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
