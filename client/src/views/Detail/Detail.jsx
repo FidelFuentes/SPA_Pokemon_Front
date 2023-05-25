@@ -10,9 +10,19 @@ const Detail = () => {
         const URL_BASE = '/pokemon'
 
         fetch(`${URL_BASE}/${detailId}`)
-            .then((response) => response.json())
-            
-            .then((poke) => { setPokemon(poke) })
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then((poke) => {
+        console.log(poke);
+        setPokemon(poke)})
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
             
     }, [detailId]);
 
