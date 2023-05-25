@@ -1,5 +1,5 @@
 import styles from './Pagination.module.css'
-
+// deploy
 const Pagination = ({ pokemonsPerPage, totalPokemons, paginate, currentPage }) => {
   const pageNumbers = [];
 
