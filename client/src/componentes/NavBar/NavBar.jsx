@@ -11,7 +11,7 @@ const NavBar = () =>{
         <div className={style.navContainer}>
             <div className={style.titleContainer}>
                 <h1>PokéApp</h1> 
-                <img src="https://cdn.iconscout.com/icon/free/png-256/free-squirtle-pokemon-water-wartortle-cartoon-32212.png" className={style.navImage}></img>
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-squirtle-pokemon-water-wartortle-cartoon-32212.png" className={style.navImage} alt="pokeIcon"></img>
                 </div>
                 <div>
             <Link to="/home" onClick={() => dispatch(clearSearch())}>Home</Link>
