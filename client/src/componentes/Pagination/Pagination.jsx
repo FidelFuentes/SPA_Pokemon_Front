@@ -1,4 +1,6 @@
 import styles from './Pagination.module.css'
+import { Link } from 'react-router-dom';
+
 // deploy
 const Pagination = ({ pokemonsPerPage, totalPokemons, paginate, currentPage }) => {
   const pageNumbers = [];
@@ -21,9 +23,10 @@ const Pagination = ({ pokemonsPerPage, totalPokemons, paginate, currentPage }) =
         {pageNumbers.map(number => (
           <li key={number} className={number === currentPage ? styles['active-page'] : ''}>
 
-            <a href="#" onClick={() => paginate(number)} className='page-link'>
-                {number}
-            </a>
+        <Link to="#" onClick={() => paginate(number)} className={styles['page-link']}>
+            {number}
+        </Link>
+
           </li>
         ))}
         <li>
