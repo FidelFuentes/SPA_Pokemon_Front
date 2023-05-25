@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import style from './Card.module.css'
 import { useDispatch } from 'react-redux';
 import { deletePokemon } from '../../redux/actions'; 
-//que debo hacer aca ==>
+//que debo hacer aca ==> paso 4 completo
 
 const Card = ({ id, name, image, types, created }) => {
     const dispatch = useDispatch();
