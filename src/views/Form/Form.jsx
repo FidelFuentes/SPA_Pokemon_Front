@@ -98,7 +98,7 @@ const Form = () => {
             weight: isNaN(form.weight) ? 'The Pokémon\'s weight must be a number' : 
                     form.weight < 0 ? 'The Pokémon\'s weight cannot be negative' : 
                     form.weight > 1000 ? 'The Pokémon\'s weight cannot exceed 1000 points' : '',
-            image: form.imageSize.width > 260 || form.imageSize.height > 260 ? 'Image size should not exceed 260x260' : '',
+           // image: form.imageSize.width > 260 || form.imageSize.height > 260 ? 'Image size should not exceed 260x260' : '',
             types: !form.types ? 'Pokémon types cannot be empty' : 
                    form.types.some(type => /\d/.test(type)) ? 'Pokémon types cannot contain numbers' : '',
         };
