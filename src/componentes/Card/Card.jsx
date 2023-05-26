@@ -11,12 +11,17 @@ const Card = ({ id, name, image, types, created }) => {
         dispatch(deletePokemon(id));
     };
 
+    // Convertir los datos de la imagen en una URL si es necesario
+    let url = '';
+    if (image && image.data) {
+        url = String.fromCharCode.apply(null, image.data);
+    }
+
     return (
         <div className={style.cardWrapper}>
             <Link to={`/detail/${id}`} className={style.card}>
                 <p className={style.id}>{created ? '' : id}</p>
-                <img src={image} alt={name} />
-                {console.log('aca esta la imagen',image)}
+                <img src={url} alt={name} />
                 <p>{name}</p>
                 <div>
                     {types.map((type, index) => <span key={index}>{type} </span>)}
