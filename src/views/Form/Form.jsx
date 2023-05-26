@@ -108,18 +108,17 @@ const Form = () => {
     const handleImageChange = (event) => {
         const file = event.target.files[0];
         if (file) {
-            const url = URL.createObjectURL(file);
-            let img = new Image();
-            img.src = url;
-            img.onload = () => {
+            const reader = new FileReader(); //string base 64
+            reader.onloadend = () => {
                 setForm({ 
                     ...form, 
-                    image: file, 
-                    imageSize: {width: img.width, height: img.height}
+                    image: reader.result
                 });
             };
+            reader.readAsDataURL(file); // ()from fileReader => leer contenido de archivo especifico
         }
     };
+    
     
       
 

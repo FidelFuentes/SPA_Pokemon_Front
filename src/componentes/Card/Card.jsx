@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
-import style from './Card.module.css'
+import style from './Card.module.css';
 import { useDispatch } from 'react-redux';
-import { deletePokemon } from '../../redux/actions'; 
-//que debo hacer aca ==> paso 5 completo
+import { deletePokemon } from '../../redux/actions';
 
 const Card = ({ id, name, image, types, created }) => {
     const dispatch = useDispatch();
@@ -16,7 +15,7 @@ const Card = ({ id, name, image, types, created }) => {
         <div className={style.cardWrapper}>
             <Link to={`/detail/${id}`} className={style.card}>
                 <p className={style.id}>{created ? '' : id}</p>
-                <img src={image.startsWith('http') ? image : `/${image}`} alt={name} />
+                <img src={image} alt={name} />
                 <p>{name}</p>
                 <div>
                     {types.map((type, index) => <span key={index}>{type} </span>)}
@@ -24,8 +23,7 @@ const Card = ({ id, name, image, types, created }) => {
             </Link>
             {created && <button onClick={handleDeleteClick}>Delete</button>}
         </div>
-    )
+    );
 }
 
-
-export default Card
+export default Card;
