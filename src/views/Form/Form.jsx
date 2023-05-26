@@ -20,8 +20,8 @@ const Form = () => {
         speed:'',
         height:'',
         weight:'',
-        image: null,
-        imageSize: {width: 0, height: 0},
+        image: '',//cambiado de null
+        //imageSize: {width: 0, height: 0},
         types: [],
     });
 
