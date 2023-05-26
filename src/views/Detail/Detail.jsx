@@ -39,6 +39,7 @@ const Detail = () => {
                         <h2>Peso: {pokemon.weight}</h2>
                         <h2>Tipo: {pokemon && pokemon.types && pokemon.types.join(", ")}</h2>
                         <img src={pokemon.image} alt={pokemon.name} />
+                        {console.log('aca esta la imagen',pokemon.image)}
                     </div>
                 ) : (
                     <h3>Loading...</h3>

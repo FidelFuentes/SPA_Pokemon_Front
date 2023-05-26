@@ -16,6 +16,7 @@ const Card = ({ id, name, image, types, created }) => {
             <Link to={`/detail/${id}`} className={style.card}>
                 <p className={style.id}>{created ? '' : id}</p>
                 <img src={image} alt={name} />
+                {console.log('aca esta la imagen',image)}
                 <p>{name}</p>
                 <div>
                     {types.map((type, index) => <span key={index}>{type} </span>)}
