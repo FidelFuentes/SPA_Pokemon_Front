@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fcfefb;
+}
+
+.movedImg {
+  margin-top: auto;
+}
+
+
+.myButton {
+  display: inline-block;
+  padding: 15px 30px; /* Aumenta el tamaño del botón aumentando el padding */
+  background-color: #2E7D32;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.25em; /* Hacer el texto del botón más grande */
+  font-weight: 500;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrega una transición al transform */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra más grande */
+  margin-top: 2rem
+  
+}
+
+.myButton:hover {
+  background-color: #1B5E20;
+  transform: translateY(-3px); /* Cuando se pasa el ratón por encima, el botón se moverá hacia arriba */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); /* Y su sombra será aún más grande */
+}
+
+.title {
+  color: #212121; /* Color blanco para que contraste con el fondo oscuro */
+  font-size: 4rem; /* Ajusta el tamaño de la fuente según tus necesidades */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Un poco de sombra para que el texto sea más legible */
+  margin-bottom: 20px; /* Espacio entre el título y el botón */
+  margin-top: 13%
+}
+.h3{
+  color: #212121;
+
+}
